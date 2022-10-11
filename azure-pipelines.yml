@@ -20,6 +20,7 @@ jobs:
     displayName: 'Run a multi-line script'
 
 - job: part2
+  dependsOn: part1
   pool:
     vmImage: 'ubuntu-latest'
     name: default
@@ -29,5 +30,5 @@ jobs:
       targetType: 'inline'
       script: |
         # Write your commands here
-        echo 'Greetings from Seattle!'
+        echo 'Greetings from Charlotte!'
         echo 'Variable: $(variable1)'
