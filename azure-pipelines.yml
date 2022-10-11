@@ -25,3 +25,4 @@ steps:
       # Write your commands here
       
       echo 'Hello from Charlotte'
+      echo 'Variable: $(variable1)'
