@@ -17,6 +17,7 @@ stages:
       displayName: 'Run a multi-line script'
 
 - stage: stage2
+  dependsOn: stage1
   jobs:
   - job: stage2part2
     pool:
@@ -30,3 +31,13 @@ stages:
           # Write your commands here
           echo 'Greetings from Charlotte!'
           echo 'Variable: $(variable1)'
+
+- stage: stage3
+  dependsOn: stage2
+  jobs:
+  - job: stage3job1
+
+- stage: stage4
+  dependsOn: stage1
+  jobs:
+  - job: stage4job1
