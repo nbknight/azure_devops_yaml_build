@@ -36,8 +36,14 @@ stages:
   dependsOn: stage2
   jobs:
   - job: stage3job1
+    pool:
+      vmImage: 'ubuntu-latest'
+      name: default
 
 - stage: stage4
   dependsOn: stage1
   jobs:
   - job: stage4job1
+    pool:
+      vmImage: 'ubuntu-latest'
+      name: default
