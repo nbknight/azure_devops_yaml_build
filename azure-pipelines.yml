@@ -47,3 +47,10 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
       name: default
+
+- stage: stage5
+  dependsOn:
+  - stage4
+  - stage5
+  jobs:
+  - job: stage5job1
