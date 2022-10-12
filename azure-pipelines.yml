@@ -51,6 +51,6 @@ stages:
 - stage: stage5
   dependsOn:
   - stage4
-  - stage5
+  - stage3
   jobs:
   - job: stage5job1
