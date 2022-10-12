@@ -53,7 +53,8 @@ stages:
   - stage4
   - stage3
   jobs:
-  - job: stage5job1
+  - deployment: stage5job1
+    environment: production
     pool:
       vmImage: 'ununtu-latest'
       name: default
