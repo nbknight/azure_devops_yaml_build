@@ -54,3 +54,6 @@ stages:
   - stage3
   jobs:
   - job: stage5job1
+    pool:
+      vmImage: 'ununtu-latest'
+      name: default
