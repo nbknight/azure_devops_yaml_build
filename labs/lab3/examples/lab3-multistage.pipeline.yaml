@@ -7,7 +7,22 @@ stages:
 - stage: linux
   displayName: 'Build Stage Linux'
   dependsOn: []
+  jobs:
+    - template: lab3-multistage-jobs.template.yaml
+      parameters:
+        name: 'Linux'
+        pool:
+          vmImage: 'ubuntu-16.04'
+          name: default
+  
 
 - stage: windows
   displayName: 'Build Stage Windows'
   dependsOn: []
+  jobs:
+    - template: lab3-multistage-jobs.template.yaml
+      parameters:
+        name: 'Windows'
+        pool:
+          vmImage: 'vs2017-win2016'
+          name: default
